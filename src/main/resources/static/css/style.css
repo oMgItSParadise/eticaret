@@ -1,0 +1,59 @@
+body, .root {
+    -fx-font-family: 'Inter', sans-serif;
+    -fx-background-color: linear-gradient(to bottom right, #6a11cb, #2575fc);
+    -fx-text-fill: white;
+}
+
+.grid-pane {
+    -fx-hgap: 12px;
+    -fx-vgap: 12px;
+    -fx-padding: 40px;
+}
+
+.label.title {
+    -fx-text-fill: white;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+.text-field, .password-field {
+    -fx-prompt-text-fill: rgba(255,255,255,0.7);
+    -fx-background-radius: 8px;
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-text-fill: white;
+    -fx-padding: 10px;
+    -fx-border-radius: 8px;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+}
+
+.button {
+    -fx-background-color: #4338ca;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 20px;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0, 0, 2);
+}
+
+.button:hover {
+    -fx-background-color: #5c4be6;
+}
+
+.label.error {
+    -fx-text-fill: #ff4d4d;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+.hyperlink {
+    -fx-text-fill: white;
+    -fx-underline: true;
+    -fx-cursor: hand;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: #bbbbff;
+}

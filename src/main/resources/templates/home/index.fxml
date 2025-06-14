@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<?import java.lang.String?>
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="source.eticaret.controller.HomeController"
+      spacing="0"
+      stylesheets="@../../static/css/home.css,@../../static/css/style.css">
+
+    <!-- Üst Menü -->
+    <BorderPane style="-fx-background-color: #f1641e; -fx-padding: 10 20;">
+        <left>
+            <HBox alignment="CENTER_LEFT" spacing="20">
+                <Label text="E-Ticaret" style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;" />
+            </HBox>
+        </left>
+        <center>
+            <HBox alignment="CENTER">
+                <TextField fx:id="searchField" promptText="Herhangi bir şey ara..."
+                           onAction="#handleSearch"
+                           style="-fx-pref-width: 400; -fx-padding: 8; -fx-background-radius: 20; -fx-border-radius: 20;" />
+            </HBox>
+        </center>
+        <right>
+            <HBox spacing="15" alignment="CENTER_RIGHT">
+                <Button fx:id="sellButton" text="Satış Yap" onAction="#startSelling"
+                        style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" />
+                <Button fx:id="profileButton" text="Hesabım" onAction="#openProfile"
+                        style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" />
+                <Button fx:id="cartButton" onAction="#openCart"
+                        style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;"
+                        contentDisplay="RIGHT">
+                    <graphic>
+                        <StackPane>
+                            <ImageView fitWidth="20" fitHeight="20" pickOnBounds="true">
+                                <Image url="@../../static/image/cart.png" />
+                            </ImageView>
+                        </StackPane>
+                    </graphic>
+                </Button>
+            </HBox>
+        </right>
+    </BorderPane>
+
+    <!-- Ana İçerik -->
+    <HBox spacing="20" style="-fx-padding: 20; -fx-background-color: #f5f5f1;" VBox.vgrow="ALWAYS">
+        <!-- Kategoriler Bölümü - Sabit Genişlikte -->
+        <VBox spacing="10" style="-fx-padding: 15; -fx-min-width: 250; -fx-max-width: 250; -fx-background-color: #ffffff; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 2, 2);">
+            <Label text="Kategoriler" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 0 0 10 0;" />
+            <VBox fx:id="categoriesContainer" spacing="8" style="-fx-padding: 5 0;" />
+        </VBox>
+
+        <!-- Ürünler Bölümü - Esnek Genişlik -->
+        <VBox spacing="20" style="-fx-background-color: #f5f5f1;" HBox.hgrow="ALWAYS">
+            <!-- Ana İçerik -->
+            <VBox spacing="20" style="-fx-background-color: #f5f5f1;" HBox.hgrow="ALWAYS">
+                <!-- Öne Çıkan Ürünler -->
+                <VBox fx:id="featuredProductsContainer" spacing="10" style="-fx-background-color: #ffffff; -fx-padding: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 2, 2);">
+                    <Label text="Öne Çıkan Ürünler" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 0 0 10 0;" />
+                    <ScrollPane hbarPolicy="NEVER" vbarPolicy="AS_NEEDED" fitToWidth="true" style="-fx-background-color: transparent;">
+                        <GridPane fx:id="productsGrid" styleClass="products-grid" />
+                    </ScrollPane>
+                </VBox>
+                
+                <!-- Kategori Ürünleri -->
+                <VBox fx:id="categoryProductsContainer" spacing="10" style="-fx-background-color: #ffffff; -fx-padding: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 2, 2);">
+                    <Label fx:id="categoryTitle" text="Kategori Ürünleri" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 0 0 10 0;" />
+                    <ScrollPane hbarPolicy="NEVER" vbarPolicy="AS_NEEDED" fitToWidth="true" style="-fx-background-color: transparent;">
+                        <GridPane fx:id="categoryProductsGrid" styleClass="products-grid" />
+                    </ScrollPane>
+                </VBox>
+            </VBox>
+        </VBox>
+    </HBox>
+
+    <!-- Alt Bilgi -->
+    <VBox style="-fx-background-color: #222; -fx-padding: 20; -fx-spacing: 15;">
+        <Separator style="-fx-background-color: #444;" />
+        <HBox spacing="20" alignment="CENTER">
+            <Label text="© 2025 E-Ticaret Uygulaması" style="-fx-text-fill: #bbb;" />
+            <Label text="Gizlilik Politikası" style="-fx-text-fill: #bbb; -fx-underline: true; -fx-cursor: hand;" />
+            <Label text="Kullanım Koşulları" style="-fx-text-fill: #bbb; -fx-underline: true; -fx-cursor: hand;" />
+        </HBox>
+    </VBox>
+</VBox>

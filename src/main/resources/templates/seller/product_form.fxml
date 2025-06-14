@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<DialogPane xmlns:fx="http://javafx.com/fxml/1" 
+           stylesheets="@../../styles/main.css">
+    
+    <header>
+        <Label text="Yeni Ürün Ekle" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+    </header>
+    
+    <content>
+        <GridPane hgap="10" vgap="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            
+            <Label text="Ürün Adı:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            
+            <Label text="Açıklama:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextArea fx:id="descriptionField" GridPane.columnIndex="1" GridPane.rowIndex="1" wrapText="true" />
+            
+            <Label text="Fiyat (₺):" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="priceField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            
+            <Label text="Stok Miktarı:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="stockField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            
+            <Label text="Kategori ID:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <TextField fx:id="categoryIdField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            
+            <Label text="Resim URL:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <TextField fx:id="imageUrlField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        </GridPane>
+    </content>
+    
+    <buttonTypes>
+        <ButtonType text="İptal" buttonData="CANCEL_CLOSE" />
+        <ButtonType text="Kaydet" buttonData="OK_DONE" />
+    </buttonTypes>
+</DialogPane>

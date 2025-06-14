@@ -1,0 +1,83 @@
+/* General dialog styling */
+.dialog-pane {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+    -fx-spacing: 10;
+}
+
+/* Dialog header */
+.dialog-pane .header-panel {
+    -fx-background-color: #f5f5f5;
+    -fx-padding: 10 15;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-font-size: 1.2em;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+/* Content area */
+.dialog-pane .content {
+    -fx-padding: 15 5 15 5;
+    -fx-spacing: 10;
+}
+
+/* Buttons */
+.dialog-pane .button-bar {
+    -fx-padding: 10 0 0 0;
+}
+
+.dialog-pane .button {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white;
+    -fx-padding: 5 15 5 15;
+    -fx-background-radius: 3;
+}
+
+.dialog-pane .button:hover {
+    -fx-background-color: #3a7bc8;
+}
+
+.dialog-pane .button:default {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white;
+}
+
+.dialog-pane .button:default:hover {
+    -fx-background-color: #3a7bc8;
+}
+
+.dialog-pane .button:cancel {
+    -fx-background-color: #f5f5f5;
+    -fx-text-fill: #333333;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1;
+    -fx-border-radius: 3;
+}
+
+.dialog-pane .button:cancel:hover {
+    -fx-background-color: #e8e8e8;
+}
+
+/* Error label styling */
+.error-label {
+    -fx-text-fill: #d32f2f;
+    -fx-font-size: 0.9em;
+    -fx-padding: 5 0 0 0;
+}
+
+/* Text field styling */
+.text-field, .password-field {
+    -fx-pref-height: 35;
+    -fx-padding: 5 10;
+    -fx-background-radius: 3;
+    -fx-border-radius: 3;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #4a90e2;
+    -fx-effect: dropshadow(gaussian, rgba(74, 144, 226, 0.3), 10, 0, 0, 2);
+}

@@ -1,0 +1,41 @@
+/* Account Page Styles */
+
+.account-button {
+    -fx-background-color: white;
+    -fx-text-fill: #333;
+    -fx-font-size: 14px;
+    -fx-padding: 12 20;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-alignment: center-left;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 5, 0, 0, 1);
+}
+
+.account-button:hover {
+    -fx-background-color: #f8f8f8;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.logout-button {
+    -fx-background-color: #f1641e;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 12 20;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.logout-button:hover {
+    -fx-background-color: #e05a16;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .account-button, .logout-button {
+        -fx-padding: 15 20;
+        -fx-font-size: 15px;
+    }
+}

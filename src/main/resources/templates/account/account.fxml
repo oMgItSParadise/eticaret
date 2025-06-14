@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.ImageView?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="source.eticaret.controller.AccountController"
+      spacing="20"
+      style="-fx-background-color: #f5f5f1;"
+      stylesheets="@../../static/css/account.css">
+
+    <!-- Header -->
+    <BorderPane style="-fx-background-color: #f1641e; -fx-padding: 10 20;">
+        <left>
+            <HBox alignment="CENTER_LEFT" spacing="20">
+                <Button text="Geri" onAction="#goBack" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" />
+                <Label text="Hesabım" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" />
+            </HBox>
+        </left>
+    </BorderPane>
+
+    <!-- Main Content -->
+    <VBox fx:id="accountContent" spacing="20" style="-fx-padding: 20;" VBox.vgrow="ALWAYS">
+        <!-- User Info Card -->
+        <VBox style="-fx-background-color: white; -fx-background-radius: 8; -fx-padding: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 2, 4);">
+            <HBox spacing="20" alignment="CENTER_LEFT">
+                <ImageView fx:id="userAvatar" fitWidth="80" fitHeight="80" style="-fx-background-color: #e0e0e0; -fx-background-radius: 40;" />
+                <VBox spacing="5">
+                    <Label fx:id="userName" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+                    <Label fx:id="userEmail" style="-fx-text-fill: #666;" />
+                    <Label fx:id="userRole" style="-fx-text-fill: #f1641e; -fx-font-weight: bold;" />
+                </VBox>
+            </HBox>
+        </VBox>
+
+        <!-- Account Options -->
+        <VBox spacing="10">
+            <Label text="HESAP AYARLARI" style="-fx-text-fill: #666; -fx-font-weight: bold; -fx-padding: 10 0 5 10;" />
+            
+            <Button text="Profil Bilgilerim" onAction="#showProfile" styleClass="account-button" />
+            <Button text="Adreslerim" onAction="#showAddresses" styleClass="account-button" />
+            <Button text="Sipariş Geçmişim" onAction="#showOrders" styleClass="account-button" />
+            <Button text="Favorilerim" onAction="#showFavorites" styleClass="account-button" />
+            
+            <Separator style="-fx-padding: 10 0;" />
+            
+            <Button text="Çıkış Yap" onAction="#logout" styleClass="logout-button" />
+        </VBox>
+    </VBox>
+</VBox>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="CENTER" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml"
+          fx:controller="source.eticaret.controller.AuthController">
+    <padding>
+        <Insets top="25" right="25" bottom="10" left="25"/>
+    </padding>
+
+    <Text id="welcome-text" text="Kayıt Ol" GridPane.columnIndex="0" GridPane.columnSpan="2"
+          GridPane.rowIndex="0" style="-fx-font-size: 32px; -fx-font-weight: bold;"/>
+
+    <Label text="Kullanıcı Adı:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="registerUsernameField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <Label text="E-posta:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="registerEmailField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Label text="Şifre:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <PasswordField fx:id="registerPasswordField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="4">
+        <Button text="Kayıt Ol" onAction="#handleRegister"/>
+    </HBox>
+
+    <Label fx:id="registerErrorLabel" style="-fx-text-fill: red;" GridPane.columnIndex="0"
+           GridPane.columnSpan="2" GridPane.rowIndex="5"/>
+
+    <Hyperlink text="Zaten hesabınız var mı? Giriş Yapın" onAction="#switchToLogin"
+               GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="6"/>
+</GridPane>
