@@ -1,4 +1,3 @@
-```markdown
 # 🛒 Eticaret – E-Commerce Web Application
 
 Welcome to **Eticaret**, a modern and fully functional e-commerce platform built with **ASP.NET Core**! This project serves as a foundational backend system for managing products, categories, users, and orders – ideal for learning full-stack development or launching your own online store.
