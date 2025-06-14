@@ -1,9 +1,3 @@
-Sure! I checked out the GitHub repository: [`oMgItSParadise/eticaret`](https://github.com/oMgItSParadise/eticaret). It appears to be an **e-commerce** project, likely a full-stack application using ASP.NET Core for the backend and possibly Razor Pages or MVC for the frontend.
-
-Here's a professional and engaging `README.md` you can use or modify for your repo:
-
----
-
 ```markdown
 # 🛒 Eticaret – E-Commerce Web Application
 
